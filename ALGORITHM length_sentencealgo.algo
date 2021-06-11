@@ -1,0 +1,24 @@
+ALGORITHM length_sentence
+VAR
+        c:CHAR:=''
+        NB_CHAR:INTEGER:=0
+        NB_WORDS:INTEGER:=0
+        NB_VOW:INTEGER:=0
+
+BEGIN
+        WHILE (c<>'.') DO
+        Read(c)
+    NB_CHAR:=NB_CHAR+1
+        if(c=' ')then
+            NB_WORDS:=NB_WORDS+1
+        END_IF
+        IF (c='a'OR c='i'OR c='y' OR c='u'OR c='o'OR c='e') THEN
+            NB_VOW:=NB_VOW+1
+        END_IF
+
+    Write ('The length of the sentences is',NB_CHAR+1)
+    Write('Number of words is :',NB_WORDS+1)
+    Write('Number of vowel is :',NB_VOW)
+    END_WHILE
+
+END
